@@ -3,12 +3,10 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-            steps {
-                // Replace with your actual repository URL
-                git 'https://github.com/Ayush-cmd003/23034211058_Pythin'
-            }
-        }
-
+    steps {
+        git branch: 'main', url: 'https://github.com/Ayush-cmd003/23034211058_Python.git'
+    }
+}
         stage('Install Dependencies') {
             steps {
                 // Check if requirements.txt exists before trying to install dependencies
