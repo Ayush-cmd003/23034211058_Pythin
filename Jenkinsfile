@@ -35,8 +35,22 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                // Run the application and output the results
+                sh 'python data.py > output.txt'
                 echo 'Deploying Application'
                 // You can add deployment steps here (e.g., copying files, starting services, etc.)
+            }
+        }
+        stage('Display Output') {
+            steps {
+                // Display the contents of the output file in the console
+                sh 'cat output.txt'
+            }
+        }
+        stage('Archive Output') {
+            steps {
+                // Archive the output file so it can be downloaded from the Jenkins interface
+                archiveArtifacts artifacts: 'output.txt', allowEmptyArchive: true
             }
         }
     }
