@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
     steps {
-        git branch: 'main', url: 'https://github.com/Ayush-cmd003/23034211058_Python.git'
+        git branch: 'main', url: 'https://github.com/Ayush-cmd003/23034211058_Pythin.git'
     }
 }
         stage('Install Dependencies') {
