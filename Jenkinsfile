@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Replace with your actual repository URL
-                git 'https://github.com/your-repo/python-app.git'
+                git 'https://github.com/Ayush-cmd003/23034211058_Pythin.git'
             }
         }
 
